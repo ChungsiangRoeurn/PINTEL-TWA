@@ -16,7 +16,7 @@ export default function Home() {
   }, [router]);
 
   return (
-    <main className="flex items-center justify-center min-h-screen mx-auto max-w-sm w-full bg-[#E41E3F]">
+    <main className="flex items-center justify-center min-h-screen mx-auto max-w-md w-full bg-[#E41E3F]">
       <div className="flex flex-col items-center">
         <Image
           src="favicon.ico"

@@ -30,7 +30,7 @@ export default function BranchSelector() {
 
       {/* Sheet Content */}
       <SheetContent
-        className="max-w-sm w-full mx-auto flex items-center justify-center rounded-t-3xl"
+        className="max-w-md w-full mx-auto flex items-center justify-center rounded-t-3xl"
         side="bottom"
       >
         <SheetHeader>

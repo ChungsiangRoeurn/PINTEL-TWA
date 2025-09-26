@@ -13,7 +13,7 @@ export default async function MenuPage({
   const branchId = resolvedParams.branchId;
 
   return (
-    <main className="max-w-sm w-full mx-auto">
+    <main className="max-w-md w-full mx-auto">
       <MenuClient params={{ branchId }} />
     </main>
   );

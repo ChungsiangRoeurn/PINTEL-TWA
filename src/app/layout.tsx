@@ -33,7 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${kantumruy.variable} ${khmer_moul.variable} antialiased bg-yellow-300`}
+        className={`${kantumruy.variable} ${khmer_moul.variable} antialiased`}
         suppressHydrationWarning
       >
         {children}

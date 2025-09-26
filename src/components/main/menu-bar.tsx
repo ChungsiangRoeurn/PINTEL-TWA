@@ -11,7 +11,7 @@ export default function MenuBar() {
   return (
     <div>
       {/* Menu Bar */}
-      <div className="fixed bottom-1 pb-2 left-0 right-0 border-t max-w-sm w-full mx-auto p-2 bg-white flex justify-between items-center">
+      <div className="fixed bottom-1 pb-2 left-0 right-0 border-t max-w-md w-full mx-auto p-2 bg-white flex justify-between items-center">
         {/* Home */}
         <div className="flex flex-col gap-1 items-center text-sm text-[#E41E3F]">
           <House size={20} />
