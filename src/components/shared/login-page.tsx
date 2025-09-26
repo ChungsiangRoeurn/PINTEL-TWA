@@ -61,7 +61,7 @@ export default function LoginPage({
         <Button
           variant="default"
           onClick={handleNext}
-          className="w-full py-6 rounded-full bg-[#DE2348] cursor-pointer text-white hover:bg-red-700 border-red-500"
+          className="w-full py-6 rounded-full bg-[#DE2348] cursor-pointer text-white hover:bg-red-700 border-[#E41E3F]"
         >
           {buttonText}
         </Button>

@@ -1,4 +1,4 @@
-import MenuClient from "@/app/menu/[branchId]/MenuCliennt";
+import MenuClient from "@/app/(main)/menu/[branchId]/Menu-Client";
 
 interface SegmentParams {
   branchId: string;
@@ -7,9 +7,8 @@ interface SegmentParams {
 export default async function MenuPage({
   params,
 }: {
-  params: Promise<SegmentParams>; // must be a Promise
+  params: Promise<SegmentParams>;
 }) {
-  // Await the promise
   const resolvedParams = await params;
   const branchId = resolvedParams.branchId;
 

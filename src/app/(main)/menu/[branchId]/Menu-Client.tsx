@@ -2,9 +2,27 @@
 "use client";
 
 import { useState } from "react";
-import { Search, ShoppingCart } from "lucide-react";
+import {
+  ArrowBigDownDash,
+  ArrowDown,
+  Barcode,
+  BellDot,
+  ChevronDown,
+  Columns3Cog,
+  Grid,
+  Home,
+  House,
+  LayoutGrid,
+  MapPinIcon,
+  ScanBarcode,
+  Search,
+  Ticket,
+  Truck,
+} from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import MenuBar from "@/components/main/menu-bar";
+import BranchSelector from "@/components/main/branch-selector";
 
 interface MenuItem {
   id: string;
@@ -21,7 +39,6 @@ export default function MenuClient({
 }) {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  // Sample menu data - in real app you'd fetch based on branchId
   const menuItems: Record<string, MenuItem[]> = {
     ifl: [
       {
@@ -68,13 +85,13 @@ export default function MenuClient({
     <div className="min-h-screen bg-gray-50">
       {/* Top header */}
       <div className="bg-white px-4 py-3 flex items-center justify-between border-b">
-        <div className="flex items-center">
-          <span className="text-sm">កន្លែង</span>
-          <span className="ml-2 text-sm font-medium">Bonchon IFL</span>
-        </div>
+        <BranchSelector />
         <div className="flex items-center gap-3">
           <Button variant="outline" size="icon">
-            <ShoppingCart className="h-5 w-5" />
+            <ArrowBigDownDash />
+          </Button>
+          <Button variant="outline">
+            <BellDot />
           </Button>
           <Button variant="outline" size="icon">
             <Image
@@ -109,7 +126,7 @@ export default function MenuClient({
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 text-sm whitespace-nowrap rounded-full ${
                 activeCategory === category
-                  ? "bg-red-500 text-white"
+                  ? "bg-[#E41E3F] text-white"
                   : "bg-gray-100 text-gray-700"
               }`}
             >
@@ -126,16 +143,7 @@ export default function MenuClient({
         ))}
       </div>
 
-      {/* Cart summary */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t p-4">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-sm">ចំណូល • 6 មុខម្ហូប</span>
-          <span className="font-bold">18,000៛</span>
-        </div>
-        <Button className="w-full bg-red-500 text-white py-3 rounded-lg font-medium">
-          ទិញឥឡូវនេះ
-        </Button>
-      </div>
+      <MenuBar />
     </div>
   );
 }
@@ -157,7 +165,7 @@ function MenuItemCard({ item }: { item: MenuItem }) {
       <div className="p-3">
         <h3 className="font-medium text-sm">{item.name}</h3>
         <div className="mt-1 flex items-center justify-between">
-          <span className="text-red-500 font-bold">
+          <span className="text-[#E41E3F] font-normal">
             ${item.price.toFixed(2)}
           </span>
           <div className="flex items-center gap-2">

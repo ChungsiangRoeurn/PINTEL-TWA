@@ -1,12 +1,35 @@
-import LanguagePage from "@/app/home/language";
-import React from "react";
+"use client";
 
-export default function page() {
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("/language");
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [router]);
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-sm">
-        <LanguagePage />
+    <main className="flex items-center justify-center min-h-screen mx-auto max-w-sm w-full bg-[#E41E3F]">
+      <div className="flex flex-col items-center">
+        <Image
+          src="favicon.ico"
+          alt="Pintel Logo"
+          width={140}
+          height={140}
+          className="bg-white rounded-full p-4"
+          priority
+        />
+        <p className="mt-4 text-white text-lg font-medium">
+          Connect business to the world
+        </p>
       </div>
-    </div>
+    </main>
   );
 }
