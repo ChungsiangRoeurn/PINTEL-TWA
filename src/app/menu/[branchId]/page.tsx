@@ -1,13 +1,9 @@
-// app/menu/[branchId]/page.tsx
-
 import MenuClient from "@/app/menu/[branchId]/MenuCliennt";
 
-// SegmentParams for this dynamic route
 interface SegmentParams {
   branchId: string;
 }
 
-// Page component must match PageProps
 export default async function MenuPage({
   params,
 }: {
@@ -17,7 +13,11 @@ export default async function MenuPage({
   const resolvedParams = await params;
   const branchId = resolvedParams.branchId;
 
-  return <MenuClient params={{ branchId }} />;
+  return (
+    <main className="max-w-sm w-full mx-auto">
+      <MenuClient params={{ branchId }} />
+    </main>
+  );
 }
 
 // SSG paths

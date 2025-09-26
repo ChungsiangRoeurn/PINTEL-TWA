@@ -24,7 +24,7 @@ export default function LoginPage({
   const handleBack = () => router.push("/");
 
   return (
-    <main className="flex flex-col items-center justify-between w-full min-h-screen bg-white">
+    <main className="flex flex-col items-center justify-between max-w-sm mx-auto w-full min-h-screen bg-white">
       {/* Back Button */}
       <div className="w-full flex items-center px-4 pt-6">
         <Button

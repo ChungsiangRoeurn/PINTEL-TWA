@@ -57,9 +57,9 @@ export default function BranchesPage() {
           <Button
             variant="ghost"
             onClick={handleBack}
-            className="p-2 rounded-2xl"
+            className="flex items-center gap-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-full px-3 py-2"
           >
-            <ArrowLeft className="h-6 w-6" />
+            <ArrowLeft className="size-5" />
           </Button>
           <h1 className="flex-1 text-start text-lg font-normal text-gray-900">
             ជ្រើសរើសសាខា
@@ -83,14 +83,14 @@ export default function BranchesPage() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="flex-1">
-                <h2 className="text-sm font-semibold">{branch.name}</h2>
+              <div className="flex-1 text-start">
+                <h2 className="text-sm font-medium">{branch.name}</h2>
                 <div className="flex items-start mt-1 text-xs text-gray-500">
-                  <MapPin className="h-4 w-4 mr-1 flex-shrink-0 mt-0.5" />
+                  <MapPin className="size-4 text-[#DE2348] mr-1 flex-shrink-0 mt-0.5" />
                   <span>{branch.address}</span>
                 </div>
                 <div className="flex items-center mt-1 text-xs text-gray-500">
-                  <Clock className="h-4 w-4 mr-1" />
+                  <Clock className="size-4 text-[#DE2348] mr-1" />
                   <span>{branch.time}</span>
                 </div>
               </div>
