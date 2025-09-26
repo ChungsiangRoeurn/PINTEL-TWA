@@ -28,3 +28,6 @@ export const branches = [
     image: "/images/bonchon.jpg",
   },
 ];
+
+// helper for static params
+export const branchParams = branches.map((b) => ({ branchId: b.id }));

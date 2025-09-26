@@ -1,29 +1,11 @@
-// app/menu/[branchId]/MenuClient.tsx
 "use client";
 
 import { useState } from "react";
-import {
-  ArrowBigDownDash,
-  ArrowDown,
-  Barcode,
-  BellDot,
-  ChevronDown,
-  Columns3Cog,
-  Grid,
-  Home,
-  House,
-  LayoutGrid,
-  MapPinIcon,
-  ScanBarcode,
-  Search,
-  Ticket,
-  Truck,
-} from "lucide-react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import MenuBar from "@/components/main/menu-bar";
-import BranchSelector from "@/components/main/branch-selector";
+import { ArrowBigDownDash, BellDot, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import BranchSelector from "@/components/main/branch-selector";
 
 interface MenuItem {
   id: string;
@@ -47,28 +29,35 @@ export default function MenuClient({
         name: "Spicy Chicken Sandwich",
         price: 5.9,
         description: "Fresh chicken sandwich with special sauce",
-        image: "/images/spicy-chicken-sandwich.jpg",
+        image: "/images/foods/fried-chicken.png",
       },
       {
-        id: "snackarmor-combo",
-        name: "SnackArmor Combo",
-        price: 4.99,
+        id: "coca-cola",
+        name: "Coca Cola (500ml)",
+        price: 2.99,
         description: "Pack of Jowar Stick and more",
-        image: "/images/snackarmor-combo.jpg",
+        image: "/images/foods/coca.png",
       },
       {
-        id: "healthy-long-life-toned-milk",
-        name: "Healthy Long Life Toned Milk",
+        id: "ice-cappuccino",
+        name: "Ice Cappuccino",
         price: 2.79,
         description: "Nutritious toned milk",
-        image: "/images/milk.jpg",
+        image: "/images/foods/coffee.png",
       },
       {
-        id: "peanut-butter-bite",
-        name: "Peanut Butter Bite",
+        id: "pizza",
+        name: "Pizza",
         price: 5.99,
         description: "Delicious peanut butter snack",
-        image: "/images/peanut-butter-bite.jpg",
+        image: "/images/foods/pizza.png",
+      },
+      {
+        id: "burger",
+        name: "Burger",
+        price: 4.99,
+        description: "Tasty beef burger with fresh veggies",
+        image: "/images/foods/burger.png",
       },
     ],
   };
@@ -144,7 +133,7 @@ export default function MenuClient({
         ))}
       </div>
 
-      <MenuBar />
+      {/* <MenuBar branchId={params.branchId} /> */}
     </div>
   );
 }

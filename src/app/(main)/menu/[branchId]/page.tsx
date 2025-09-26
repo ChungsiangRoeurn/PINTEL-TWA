@@ -4,13 +4,8 @@ interface SegmentParams {
   branchId: string;
 }
 
-export default async function MenuPage({
-  params,
-}: {
-  params: Promise<SegmentParams>;
-}) {
-  const resolvedParams = await params;
-  const branchId = resolvedParams.branchId;
+export default function MenuPage({ params }: { params: SegmentParams }) {
+  const branchId = params.branchId;
 
   return (
     <main className="max-w-md w-full mx-auto">

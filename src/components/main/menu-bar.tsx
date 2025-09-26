@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Columns3Cog,
   House,
@@ -5,44 +7,73 @@ import {
   ScanBarcode,
   Ticket,
 } from "lucide-react";
-import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-export default function MenuBar() {
+interface MenuBarProps {
+  branchId: string;
+}
+
+export default function MenuBar({ branchId }: MenuBarProps) {
+  const pathname = usePathname();
+
+  const menuItems = [
+    { href: `/menu/${branchId}`, icon: <House size={20} />, label: "ទំព័រដើម" },
+    {
+      href: `/menu/${branchId}/dashboard`,
+      icon: <LayoutGrid size={20} />,
+      label: "ផ្ទាំងព័ត៏មាន",
+    },
+    {
+      href: `/menu/${branchId}/scan`,
+      icon: <ScanBarcode size={24} />,
+      label: "",
+      special: true, // middle button
+    },
+    {
+      href: `/menu/${branchId}/sales`,
+      icon: <Ticket size={20} />,
+      label: "ការលក់",
+    },
+    {
+      href: `/menu/${branchId}/settings`,
+      icon: <Columns3Cog size={20} />,
+      label: "ការកំណត់",
+    },
+  ];
+
   return (
-    <div>
-      {/* Menu Bar */}
-      <div className="fixed bottom-1 pb-2 left-0 right-0 border-t max-w-md w-full mx-auto p-2 bg-white flex justify-between items-center">
-        {/* Home */}
-        <div className="flex flex-col gap-1 items-center text-sm text-[#E41E3F]">
-          <House size={20} />
-          <span>ទំព័រដើម</span>
-        </div>
+    <div className="fixed bottom-1 pb-2 left-0 right-0 border-t max-w-md w-full mx-auto p-2 bg-white flex justify-between items-center">
+      {menuItems.map((item, i) => {
+        const isActive = pathname === item.href;
 
-        {/* Explore */}
-        <div className="flex flex-col gap-1 items-center text-sm text-gray-400">
-          <LayoutGrid size={20} />
-          <span>ផ្ទាំងព័ត៏មាន</span>
-        </div>
+        if (item.special) {
+          return (
+            <Link
+              key={i}
+              href={item.href}
+              className="flex flex-col items-center gap-1 -mb-1 text-sm text-[#E41E3F]"
+            >
+              <div className="bg-[#E41E3F] p-3 rounded-full text-white">
+                {item.icon}
+              </div>
+            </Link>
+          );
+        }
 
-        {/* Scan / Center Button */}
-        <div className="flex flex-col items-center gap-1 -mb-1 text-sm text-[#E41E3F]">
-          <div className="bg-[#E41E3F] p-3 rounded-full text-white">
-            <ScanBarcode size={24} />
-          </div>
-        </div>
-
-        {/* Tickets */}
-        <div className="flex flex-col gap-1 items-center text-sm text-gray-400">
-          <Ticket size={20} />
-          <span>ការលក់</span>
-        </div>
-
-        {/* Delivery */}
-        <div className="flex flex-col gap-1 items-center text-sm text-gray-400">
-          <Columns3Cog size={20} />
-          <span>ការកំណត់</span>
-        </div>
-      </div>
+        return (
+          <Link
+            key={i}
+            href={item.href}
+            className={`flex flex-col gap-1 items-center text-sm ${
+              isActive ? "text-[#E41E3F]" : "text-gray-400"
+            }`}
+          >
+            {item.icon}
+            <span>{item.label}</span>
+          </Link>
+        );
+      })}
     </div>
   );
 }
