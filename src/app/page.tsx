@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   const router = useRouter();
 
   useEffect(() => {

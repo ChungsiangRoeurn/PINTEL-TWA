@@ -38,12 +38,12 @@ export default function LanguagePage() {
         <LanguageCard
           src="/images/flags/kh.svg"
           label="ភាសាខ្មែរ"
-          onClick={() => router.push("/auth/kh")}
+          onClick={() => router.push("/login/kh")}
         />
         <LanguageCard
           src="/images/flags/us.svg"
           label="English"
-          onClick={() => router.push("/auth/en")}
+          onClick={() => router.push("/login/en")}
         />
       </div>
     </main>

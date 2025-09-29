@@ -18,25 +18,29 @@ export default function MenuBar({ branchId }: MenuBarProps) {
   const pathname = usePathname();
 
   const menuItems = [
-    { href: `/menu/${branchId}`, icon: <House size={20} />, label: "ទំព័រដើម" },
     {
-      href: `/menu/${branchId}/dashboard`,
+      href: `/${branchId}/home`,
+      icon: <House size={20} />,
+      label: "ទំព័រដើម",
+    },
+    {
+      href: `/${branchId}/dashboard`,
       icon: <LayoutGrid size={20} />,
       label: "ផ្ទាំងព័ត៏មាន",
     },
     {
-      href: `/menu/${branchId}/scan`,
+      href: `/${branchId}/scan`,
       icon: <ScanBarcode size={24} />,
       label: "",
       special: true, // middle button
     },
     {
-      href: `/menu/${branchId}/sales`,
+      href: `/${branchId}/sales`,
       icon: <Ticket size={20} />,
       label: "ការលក់",
     },
     {
-      href: `/menu/${branchId}/settings`,
+      href: `/${branchId}/settings`,
       icon: <Columns3Cog size={20} />,
       label: "ការកំណត់",
     },

@@ -1,4 +1,3 @@
-// src/app/branches/page.tsx
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -16,7 +15,7 @@ export default function BranchesPage() {
   };
 
   const handleBranchClick = (branchId: string) => {
-    router.push(`/menu/${branchId}`);
+    router.push(`/${branchId}/home`);
   };
 
   return (
