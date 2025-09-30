@@ -7,7 +7,7 @@ import BranchSelector from "@/components/main/branch-selector";
 
 export default function HeaderBar() {
   return (
-    <div className="bg-white px-4 py-3 flex items-center justify-between border-b">
+    <div className="bg-white max-w-md w-full mx-auto px-2 flex items-center justify-between border-b">
       <BranchSelector />
       <div className="flex items-center gap-3">
         <Button variant="outline" size="icon">

@@ -10,9 +10,9 @@ export default async function Sales({
 
   return (
     <main className="flex items-center justify-center h-full max-w-md w-full mx-auto">
-      <h1 className="text-xl">
-        Sales page for branch {branchId} (under construction)
-      </h1>
+      <div className="max-w-md w-full mx-auto border border-red-500 p-4">
+        Sales Page for branch: {branchId}
+      </div>
     </main>
   );
 }

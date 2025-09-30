@@ -1,3 +1,4 @@
+import HeaderBar from "@/components/main/HeaderBar";
 import MenuBar from "@/components/main/menu-bar";
 
 export default async function BranchLayout({
@@ -11,8 +12,11 @@ export default async function BranchLayout({
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <div className="pb-20">{children}</div>
-      <MenuBar branchId={branchId} />
+      <div className="pb-20">
+        <HeaderBar />
+        {children}
+        <MenuBar branchId={branchId} />
+      </div>
     </div>
   );
 }

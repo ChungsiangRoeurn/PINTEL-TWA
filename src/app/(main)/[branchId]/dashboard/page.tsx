@@ -1,3 +1,4 @@
+import Selling from "@/components/main/dashboard/selling";
 import { branchParams } from "@/mocks/main/branches";
 
 export default async function DashboardPage({
@@ -9,9 +10,9 @@ export default async function DashboardPage({
   const branchId = resolvedParams?.branchId;
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <h1 className="text-xl">Dashboard for {branchId}</h1>
-    </div>
+    <main className="flex items-start justify-center min-h-screen max-w-md w-full mx-auto p-4">
+      <Selling />
+    </main>
   );
 }
 

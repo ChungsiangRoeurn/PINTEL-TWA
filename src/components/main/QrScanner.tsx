@@ -12,7 +12,8 @@ export default function QrScanner() {
 
     const html5QrCode = new Html5Qrcode("qr-reader");
 
-    const config = { fps: 10, qrbox: 250 };
+    // set qrbox size relative to viewport
+    const config = { fps: 10, qrbox: { width: 250, height: 250 } };
 
     html5QrCode
       .start(
@@ -23,7 +24,6 @@ export default function QrScanner() {
           html5QrCode.stop(); // stop scanning after first scan
         },
         (errorMessage) => {
-          // optional: handle scan errors
           console.log(errorMessage);
         }
       )
@@ -35,14 +35,20 @@ export default function QrScanner() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div
-        id="qr-reader"
-        ref={scannerRef}
-        style={{ width: 300, height: 300 }}
-      />
+    <div className="relative w-full h-screen bg-black flex flex-col items-center justify-center">
+      {/* Fullscreen QR reader */}
+      <div id="qr-reader" ref={scannerRef} className="w-full h-full" />
+
+      {/* Overlay border */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="border-4 border-white rounded-lg w-64 h-64" />
+      </div>
+
+      {/* Result display */}
       {scannedResult && (
-        <p className="mt-4 text-green-600">Scanned: {scannedResult}</p>
+        <p className="absolute bottom-10 text-green-400 font-medium text-lg">
+          ✅ {scannedResult}
+        </p>
       )}
     </div>
   );

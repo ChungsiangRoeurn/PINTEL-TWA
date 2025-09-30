@@ -1,8 +1,9 @@
 "use client";
 
+import { IconInput } from "@/components/shared/Input";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { LogIn, ArrowLeft } from "lucide-react";
+import { LogIn, ArrowLeft, Search, LockKeyhole, User } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 interface LoginProps {
@@ -36,7 +37,6 @@ export default function LoginPage({
         </Button>
       </div>
 
-      {/* Top Icon + Title */}
       <div className="w-full flex flex-col items-center px-4">
         <div className="flex flex-col items-center">
           <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center">
@@ -45,13 +45,18 @@ export default function LoginPage({
           <h1 className="mt-6 text-xl font-medium text-gray-900">{title}</h1>
         </div>
 
-        {/* Inputs */}
         <div className="flex flex-col gap-6 w-full mt-10">
-          <Input className="py-6" type="email" placeholder={phonePlaceholder} />
-          <Input
-            className="py-6"
+          <IconInput
+            id="password"
             type="password"
-            placeholder={passwordPlaceholder}
+            icon={LockKeyhole}
+            label={phonePlaceholder}
+          />
+          <IconInput
+            id="username"
+            type="text"
+            icon={User}
+            label={passwordPlaceholder}
           />
         </div>
       </div>
