@@ -8,18 +8,6 @@ import { useEffect } from "react";
 export default function LanguagePage() {
   const router = useRouter();
 
-  useEffect(() => {
-    // Check if the page is loaded directly (refresh)
-    if (typeof window !== "undefined" && window.performance) {
-      const navigation = window.performance.getEntriesByType(
-        "navigation"
-      )[0] as PerformanceNavigationTiming;
-      if (navigation.type === "reload") {
-        router.replace("/");
-      }
-    }
-  }, [router]);
-
   return (
     <main className="flex flex-col items-center justify-center w-full max-w-sm px-4">
       {/* Top Icon + Title */}

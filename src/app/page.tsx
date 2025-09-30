@@ -10,25 +10,34 @@ export default function Page() {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.push("/language");
-    }, 1000);
-
+    }, 1500);
     return () => clearTimeout(timer);
   }, [router]);
 
   return (
-    <main className="flex items-center justify-center min-h-screen mx-auto max-w-md w-full bg-[#E41E3F]">
+    <main className="flex max-w-md w-full mx-auto items-center justify-center min-h-screen bg-[#E41E3F]">
       <div className="flex flex-col items-center">
-        <Image
-          src="favicon.ico"
-          alt="Pintel Logo"
-          width={140}
-          height={140}
-          className="bg-white rounded-full p-4"
-          priority
-        />
-        <p className="mt-4 text-white text-lg font-medium">
-          Connect business to the world
-        </p>
+        {/* Logo and brand name in a row */}
+        <div className="flex items-center">
+          <Image
+            className="rounded-full size-40"
+            src="/images/pintel-logo.png"
+            alt="Pintel Logo"
+            width={60}
+            height={60}
+            priority
+          />
+          <div className="flex flex-col items-start">
+            <span className="text-white text-4xl font-[cursive] italic">
+              Pintel
+            </span>
+            <p className="mt-2 text-white text-sm">
+              Connect business to the world
+            </p>
+          </div>
+        </div>
+
+        {/* Slogan */}
       </div>
     </main>
   );
