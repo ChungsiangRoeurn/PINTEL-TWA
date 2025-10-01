@@ -46,15 +46,15 @@ export default function LoginPage({
 
         <div className="flex flex-col gap-6 w-full mt-10">
           <FloatInput
-            id="password"
-            type="password"
-            icon={LockKeyhole}
-            label={phonePlaceholder}
-          />
-          <FloatInput
             id="username"
             type="text"
             icon={User}
+            label={phonePlaceholder}
+          />
+          <FloatInput
+            id="password"
+            type="password"
+            icon={LockKeyhole}
             label={passwordPlaceholder}
           />
         </div>

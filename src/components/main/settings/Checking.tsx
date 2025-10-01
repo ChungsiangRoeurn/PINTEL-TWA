@@ -98,12 +98,12 @@ export default function Checking() {
             </SheetHeader>
 
             <div className="flex flex-col w-full gap-3 px-6">
-              <FloatInput icon={Search} id="text" label="ចំនួន" />
+              <FloatInput id="text" label="ចំនួន" />
               <FloatInput
                 className="h-20"
-                icon={Search}
                 id="text"
                 label="កំណត់សម្គាល់"
+                fixedLabel
               />
             </div>
             <div className="w-full flex flex-col gap-3 px-6 pb-6">

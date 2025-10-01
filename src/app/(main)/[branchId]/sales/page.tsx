@@ -132,7 +132,7 @@ export default function Sales({
   );
 
   return (
-    <main className="max-w-md w-full mx-auto min-h-screen bg-gray-50">
+    <main className="max-w-md w-full mx-auto min-h-screen bg-white pb-20">
       <div className="flex items-center gap-3 w-full p-4 bg-white sticky top-0 z-10 border-b">
         <div className="flex-1">
           <FloatInput

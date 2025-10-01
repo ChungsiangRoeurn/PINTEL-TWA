@@ -68,7 +68,7 @@ export default function MenuClient({ branchId }: { branchId: string }) {
         ) || [];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white pb-20">
       <HeaderBar variant="home" />
       <div className="px-4 py-3 border-b">
         <FloatInput id="password" type="text" icon={Search} label="ស្វែងរក" />

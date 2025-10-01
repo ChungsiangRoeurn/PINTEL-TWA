@@ -4,7 +4,7 @@ import { branchParams } from "@/mocks/main/branches";
 
 export default async function DashboardPage() {
   return (
-    <main className="flex flex-col items-center max-w-md w-full mx-auto min-h-screen bg-gray-50">
+    <main className="flex flex-col items-center max-w-md w-full mx-auto min-h-screen bg-white">
       <HeaderBar
         variant="dashboard"
         branchName="Pintel"
