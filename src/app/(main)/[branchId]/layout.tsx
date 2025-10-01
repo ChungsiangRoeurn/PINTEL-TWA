@@ -10,9 +10,9 @@ export default async function BranchLayout({
   const { branchId } = await params;
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-20">
+    <div className="min-h-screen">
       {/* <HeaderBar /> */}
-      {children}
+      <div className="bg-white min-h-screen">{children}</div>
       <MenuBar branchId={branchId} />
     </div>
   );

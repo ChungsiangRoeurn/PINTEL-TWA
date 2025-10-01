@@ -6,7 +6,7 @@
 html,
 body {
   height: 100%;
-  background: white !important; /* or bg-yellow-300 */
+  background: white !important;
 }
 
 * {
