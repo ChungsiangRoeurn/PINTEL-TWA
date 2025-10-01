@@ -8,8 +8,8 @@ export default async function Settings({}: {
     <main className="flex items-center justify-center h-full max-w-md w-full mx-auto">
       <HeaderBar
         variant="dashboard"
-        branchName="សាខា"
-        logoUrl="/images/pintel-logo.png"
+        branchName="Pintel"
+        logoUrl="/images/pintel-logo.jpg"
       />
     </main>
   );
