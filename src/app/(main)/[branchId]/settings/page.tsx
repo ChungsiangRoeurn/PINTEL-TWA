@@ -1,18 +1,16 @@
+import HeaderBar from "@/components/main/layout/HeaderBar";
 import React from "react";
 
-export default async function Settings({
-  params,
-}: {
+export default async function Settings({}: {
   params?: Promise<{ branchId: string }>;
 }) {
-  const resolvedParams = await params;
-  const branchId = resolvedParams?.branchId;
-
   return (
     <main className="flex items-center justify-center h-full max-w-md w-full mx-auto">
-      <h1 className="text-xl">
-        Settings page for branch {branchId} (under construction)
-      </h1>
+      <HeaderBar
+        variant="dashboard"
+        branchName="សាខា"
+        logoUrl="/images/pintel-logo.png"
+      />
     </main>
   );
 }

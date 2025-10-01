@@ -14,7 +14,7 @@ export default function BranchSelector() {
     <Sheet>
       {/* Trigger for the sheet */}
       <SheetTrigger asChild>
-        <div className="px-4 py-3 flex items-center justify-between cursor-pointer">
+        <div className="flex items-center justify-between cursor-pointer">
           <div className="flex justify-center items-center gap-2">
             <MapPinIcon className="w-4 h-4 text-gray-600" />
             <span className="flex flex-col justify-center items-start">

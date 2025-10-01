@@ -7,7 +7,7 @@ interface IconInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   showPasswordToggle?: boolean;
 }
 
-export function IconInput({
+export function FloatInput({
   icon: Icon,
   label,
   id,
@@ -17,7 +17,7 @@ export function IconInput({
 }: IconInputProps) {
   //   const [showPassword, setShowPassword] = useState(false);
   return (
-    <div className="relative w-full max-w-sm">
+    <div className="relative w-full">
       {/* Icon */}
       <Icon
         className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"

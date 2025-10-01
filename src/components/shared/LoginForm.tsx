@@ -1,9 +1,8 @@
 "use client";
 
-import { IconInput } from "@/components/shared/Input";
+import { FloatInput } from "@/components/shared/FloatInput";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { LogIn, ArrowLeft, Search, LockKeyhole, User } from "lucide-react";
+import { LogIn, ArrowLeft, LockKeyhole, User } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 interface LoginProps {
@@ -46,13 +45,13 @@ export default function LoginPage({
         </div>
 
         <div className="flex flex-col gap-6 w-full mt-10">
-          <IconInput
+          <FloatInput
             id="password"
             type="password"
             icon={LockKeyhole}
             label={phonePlaceholder}
           />
-          <IconInput
+          <FloatInput
             id="username"
             type="text"
             icon={User}

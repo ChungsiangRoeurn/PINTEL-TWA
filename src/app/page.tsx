@@ -17,7 +17,6 @@ export default function Page() {
   return (
     <main className="flex max-w-md w-full mx-auto items-center justify-center min-h-screen bg-[#E41E3F]">
       <div className="flex flex-col items-center">
-        {/* Logo and brand name in a row */}
         <div className="flex items-center">
           <Image
             className="rounded-full size-40"
@@ -36,8 +35,6 @@ export default function Page() {
             </p>
           </div>
         </div>
-
-        {/* Slogan */}
       </div>
     </main>
   );

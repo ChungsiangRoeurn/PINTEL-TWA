@@ -1,4 +1,4 @@
-import LoginPage from "@/components/shared/login-page";
+import LoginPage from "@/components/shared/LoginForm";
 
 export default function EnglishLogin() {
   return (

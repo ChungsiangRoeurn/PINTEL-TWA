@@ -47,7 +47,7 @@ export default function MenuBar({ branchId }: MenuBarProps) {
   ];
 
   return (
-    <div className="fixed bottom-1 pb-2 left-0 right-0 border-t max-w-md w-full mx-auto p-2 bg-white flex justify-between items-center">
+    <div className="fixed bottom-0 left-0 right-0 border-t max-w-md w-full mx-auto px-4 py-2 bg-white flex justify-between items-center">
       {menuItems.map((item, i) => {
         const isActive = pathname === item.href;
 

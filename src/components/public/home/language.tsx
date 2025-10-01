@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import LanguageCard from "@/components/shared/language-card";
+import LanguageCard from "@/components/shared/LanguageCard";
 import { Languages } from "lucide-react";
 import { useEffect } from "react";
 

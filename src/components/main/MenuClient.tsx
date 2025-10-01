@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import HeaderBar from "@/components/main/HeaderBar";
-import SearchBar from "@/components/main/SearchBar";
+import HeaderBar from "@/components/main/layout/HeaderBar";
 import Categories from "@/components/main/Categories";
 import MenuItemCard from "@/components/main/MenuItemCard";
+import { FloatInput } from "@/components/shared/FloatInput";
+import { Search } from "lucide-react";
 
 interface MenuItem {
   id: string;
@@ -68,8 +69,10 @@ export default function MenuClient({ branchId }: { branchId: string }) {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* <HeaderBar /> */}
-      <SearchBar />
+      <HeaderBar variant="home" />
+      <div className="px-4 py-3 border-b">
+        <FloatInput id="password" type="text" icon={Search} label="ស្វែងរក" />
+      </div>
       <Categories
         categories={categories}
         activeCategory={activeCategory}
